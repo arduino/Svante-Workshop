@@ -1,0 +1,99 @@
+#######################################
+# Syntax Coloring Map For IRremote
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+decode_results	KEYWORD1
+IRrecv	KEYWORD1
+IRsend	KEYWORD1
+LineFollower	KEYWORD1
+Svante	KEYWORD1
+robot		KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+blink13	KEYWORD2
+decode	KEYWORD2
+enableIRIn	KEYWORD2
+resume	KEYWORD2
+enableIROut	KEYWORD2
+sendNEC	KEYWORD2
+sendSony	KEYWORD2
+sendSanyo KEYWORD2
+sendMitsubishi KEYWORD2
+sendRaw	KEYWORD2
+sendRC5	KEYWORD2
+sendRC6	KEYWORD2
+sendDISH KEYWORD2
+sendSharp KEYWORD2
+sendPanasonic KEYWORD2
+sendJVC KEYWORD2
+stopServo	KEYWORD2
+stopMusic	KEYWORD2
+begin		KEYWORD2
+go	KEYWORD2
+stop	KEYWORD2
+initMotors	KEYWORD2
+setMotorsDiff	KEYWORD2
+motorsWrite	KEYWORD2
+getTrim	KEYWORD2
+procSpeed	KEYWORD2
+getIRArray	KEYWORD2
+lineFollowCalibrate	KEYWORD2
+doLineFollowCalibrate	KEYWORD2
+lineFollowConfig	KEYWORD2
+startLineFollow	KEYWORD2
+getIRArraryVals	KEYWORD2
+isEndLineReached	KEYWORD2
+getLineFollowError	KEYWORD2
+stopMusic	KEYWORD2
+stopServo	KEYWORD2
+
+#
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+NEC	LITERAL1
+SONY	LITERAL1
+SANYO LITERAL1
+MITSUBISHI LITERAL1
+RC5	LITERAL1
+RC6	LITERAL1
+DISH LITERAL1
+SHARP LITERAL1
+PANASONIC LITERAL1
+JVC LITERAL1
+UNKNOWN	LITERAL1
+REPEAT	LITERAL1
+MOTOR_L1	LITERAL1
+MOTOR_L2	LITERAL1
+MOTOR_R1	LITERAL1
+MOTOR_R2	LITERAL1
+TRIM	LITERAL1
+IR_1	LITERAL1
+IR_2	LITERAL1
+IR_3	LITERAL1
+EEPROM_MOTORS_CALIB	LITERAL1
+DP0	LITERAL1
+DP1	LITERAL1
+DP2	LITERAL1
+DP3	LITERAL1
+DP4	LITERAL1
+DP5	LITERAL1
+DP6	LITERAL1
+DP7	LITERAL1
+DP8	LITERAL1
+DP9	LITERAL1
+DP10	LITERAL1
+DP11	LITERAL1
+DP12	LITERAL1
+MIN_MOTOR_VAL	LITERAL1
+MOTOR_CALIB_MULTI	LITERAL1
+
