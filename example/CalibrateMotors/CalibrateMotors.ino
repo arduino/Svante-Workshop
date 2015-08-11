@@ -32,8 +32,8 @@
 *
 */
 #include <Svante.h>
-#include <IRremote.h>
-#include <IRremoteTools.h>
+#include <SVremote.h>
+#include <SVremoteTools.h>
 #include <EEPROM.h>
 
 const int RECV_PIN = DP9;
@@ -42,7 +42,7 @@ int motorsSpeed=100;
 void setup(){
   robot.begin();
   Serial.begin(9600);
-  beginIRremote(RECV_PIN);
+  beginSVremote(RECV_PIN);
   beginLEDs();
 }
 void loop(){
@@ -51,9 +51,9 @@ void loop(){
   robot.setMotorsDiff(motorCalib);
   robot.go(motorsSpeed,motorsSpeed);
 
-  if(IRrecived()){
+  if(SVreceived()){
 
-    unsigned long command=getIRresult();
+    unsigned long command=getSVresult();
     if(command==REMOTE_PLUS){
       motorsSpeed+=10;
       if(motorsSpeed>100){
@@ -68,7 +68,7 @@ void loop(){
       EEPROM.write(EEPROM_MOTORS_CALIB,motorCalib+100);
       blinkLEDs();
     }
-    resumeIRremote();
+    resumeSVremote();
   }
 }
 

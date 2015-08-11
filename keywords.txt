@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For IRremote
+# Syntax Coloring Map For SVremote
 #######################################
 
 #######################################
@@ -7,7 +7,7 @@
 #######################################
 
 decode_results	KEYWORD1
-IRrecv	KEYWORD1
+SVrecv	KEYWORD1
 IRsend	KEYWORD1
 LineFollower	KEYWORD1
 Svante	KEYWORD1
@@ -54,6 +54,7 @@ isEndLineReached	KEYWORD2
 getLineFollowError	KEYWORD2
 stopMusic	KEYWORD2
 stopServo	KEYWORD2
+SVreceived	KEYWORD2
 
 #
 #######################################

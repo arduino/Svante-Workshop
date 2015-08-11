@@ -1,7 +1,7 @@
-#include <IRremote.h>
-#include <IRremoteTools.h>
+#include <SVremote.h>
+#include <SVremoteTools.h>
 /*
-*  Demo for TinkerKitIRremote
+*  Demo for TinkerKitSVremote
 *  Make sure you are using TinkerKit remote,
 *  connect a IR receiver to pin 13 (It's recommanded
 *  to use a Tsop2238)
@@ -11,7 +11,7 @@
 *  signal.
 *  
 *  By Xun Yang 2014
-*  Forked from shirriff/Arduino-IRremote
+*  Forked from shirriff/Arduino-SVremote
 *  This crap is opensource
 *  etc etc
 *
@@ -24,20 +24,20 @@ unsigned long IRtimer=0;	//Timer for keep pressed key
 
 void setup(){
   Serial.begin(9600);
-  beginIRremote(RECV_PIN);  //Initialze the remote
+  beginSVremote(RECV_PIN);  //Initialze the remote
   IRtimer=millis();
 
 }
 void loop(){
-  if(IRreceived()){  //if a signal is received 
-    unsigned long command=getIRresult();  //decode the signal
+  if(SVreceived()){  //if a signal is received 
+    unsigned long command=getSVresult();  //decode the signal
     IRtimer=millis();
     pressed=true;
     
     //Do you stuff here
     doStuff(command);
     
-    resumeIRremote();  //resume the receiver
+    resumeSVremote();  //resume the receiver
   }
   
   if(pressed && millis()-IRtimer>TIMER_MAX){

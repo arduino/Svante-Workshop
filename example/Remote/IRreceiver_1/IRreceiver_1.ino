@@ -12,8 +12,8 @@
  (c) 2014 Arduino Verkstad
  */
 
-#include <IRremote.h>
-#include <IRremoteTools.h>
+#include <SVremote.h>
+#include <SVremoteTools.h>
 #include <Svante.h>
 #include <EEPROM.h>
 
@@ -25,20 +25,20 @@ unsigned long IRtimer=0;	     //Timer for keep pressed key
 
 void setup(){
   Serial.begin(9600);                //Initialize the serial communication
-  beginIRremote(RECV_PIN);           //Initialze the remote
+  beginSVremote(RECV_PIN);           //Initialze the remote
   IRtimer=millis();                  
 }
 
 void loop(){  
   //if a signal is received
-  if(IRreceived()){   
-    unsigned long command=getIRresult();  //decode the signal
+  if(SVreceived()){   
+    unsigned long command=getSVresult();  //decode the signal
 
     IRtimer=millis();    //Reset the timer
     pressed=true;        
 
     doStuff(command);    //Do you stuff here depending on the command
-    resumeIRremote();    //resume the receiver
+    resumeSVremote();    //resume the receiver
   }
 
   //If the button is released
