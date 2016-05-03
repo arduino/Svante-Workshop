@@ -11,8 +11,8 @@
 *  parameters so it runs faster along the track.
 *  
 *  This is an example from the Svante robot summer camp.
-*  zgz.verkstad.cc 
-*  (c) 2014 Arduino Verkstad
+*   
+*  (c) 2014 Arduino LLC
 *  
 */
 
